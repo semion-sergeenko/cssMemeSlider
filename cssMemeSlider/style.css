@@ -74,30 +74,6 @@ body {
 }
 .text_block{display: flex;}
 /* end text block */
-/* 320 */
-@media screen and (max-width: 320px) {
-    /* .im{object-fit: contain;}  */
-    .box{height: 40vh;}
-    .memewindow{height: 39vh;}
-    .overflow{height: 25vh; margin-top: .5vh;}
-    .image{height: 25vh;}
-    .im{height: 25vh;}
-    .text_wrapper{height: 5vh;margin-top: 5vh;}
-    .overflow_text{height: 5vh;}
-    .active label {        
-        width: 3vh;
-        height: 3vh;                 
-    }
-    .active{position: absolute;margin-left: 15vh;margin-top: -4vh;}
-    .round{
-        width: 1vh;
-        height: 1vh;
-        margin: 0.7vh auto;
-        
-    }
-
-}
-
 .radio {display: none;}
 
 .active label {
@@ -148,4 +124,28 @@ body {
 label:hover .round {
     border-color: white;
     background-color: white;
+}
+
+/* 320 */
+@media screen and (max-width: 320px) {
+    /* .im{object-fit: contain;}  */
+    .box{height: 40vh;}
+    .memewindow{height: 39vh;}
+    .overflow{height: 25vh; margin-top: .5vh;}
+    .image{height: 25vh;}
+    .im{height: 25vh;}
+    .text_wrapper{height: 5vh;margin-top: 5vh;flex-wrap:wrap-reverse;}
+    .overflow_text{height: 5vh;}
+    .active label {        
+        width: 3vh;
+        height: 3vh;                 
+    }
+    .active{margin-left: 15vh;margin-top: -4vh;}
+    .round{
+        width: 1vh;
+        height: 1vh;
+        margin: 0.7vh auto;
+        
+    }
+
 }
