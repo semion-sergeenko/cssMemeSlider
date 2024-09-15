@@ -145,3 +145,7 @@ body {
     transition: 1s margin-left linear;
 }
 
+label:hover .round {
+    border-color: white;
+    background-color: white;
+}
