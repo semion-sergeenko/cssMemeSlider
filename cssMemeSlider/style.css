@@ -1,0 +1,151 @@
+/* box and internal */
+
+body {
+    margin: 0 0 0 0;    
+    display: flex; 
+    align-items: center;
+    justify-content: center;     
+}
+
+.box{
+    display: flex;    
+    width: 99vw;
+    height: 98vh;
+    align-items: center;
+    justify-content: center;     
+    background-color: rgb(240, 240, 240); 
+    border: 5vh;
+    border-radius: 1vh;     
+    margin: 0 0 0 0;
+    
+}.memewindow{   
+    display: flex;
+    flex-direction: column;
+    width: 98vw;
+    height: 96vh;
+    align-items: center;        
+    background-color: rgb(35, 35, 35);
+}
+.overflow{
+    margin-top: 3vh;
+    width: 80vw;   
+    height: 70vh;        
+    border-radius: 1vh;    
+    overflow: hidden;
+}
+.image{
+	width: 320vw;
+    height: 70vh;
+    display: flex;      
+}
+.im{
+    width: 80vw;
+    height: 70vh;    
+    border-radius: 1vh;    
+}
+/* text block */
+.overflow_text{
+    width: 30vw;
+    height: 10vh;    
+    overflow: hidden;    
+}
+.texts{
+    width: 120vw;
+    height: 6vh;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    color: white;
+}
+.tx{
+    width: 30vw;
+    height: 6vh;
+    justify-content: center;
+    align-items: center;
+}
+.text_wrapper{    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    width: 80vw;
+    height: 10vh;
+    
+}
+.text_block{display: flex;}
+/* end text block */
+.radio {display: none;}
+
+.active label {
+    display: inline-block;
+    width: 3.5ex;
+    height: 3.5ex;    
+    background-color: rgb(35, 35, 35);
+    cursor: pointer;
+}
+.round{
+    width: 2ex;
+    height: 2ex;
+    margin: 0.7ex auto;
+    border: solid;
+    border-width: 0.1ex;
+    border-radius: 100%;
+    border-color: rgb(7, 167, 236);
+    background-color: rgb(7, 167, 236);
+}
+
+/* img movement */
+#radio_btn1:checked ~ .pictures .image{margin-left: 0;}
+#radio_btn2:checked ~ .pictures .image{margin-left: -100%;}
+#radio_btn3:checked ~ .pictures .image{margin-left: -200%;}
+#radio_btn4:checked ~ .pictures .image{margin-left: -300%;}
+
+/* text movement */
+#radio_btn1:checked ~ .text_wrapper .texts{margin-left: 0;}
+#radio_btn2:checked ~ .text_wrapper .texts{margin-left: -100%;}
+#radio_btn3:checked ~ .text_wrapper .texts{margin-left: -200%;}
+#radio_btn4:checked ~ .text_wrapper .texts{margin-left: -300%;}
+
+#radio_btn1:checked ~ .text_wrapper .active label[for=radio_btn1] .round,
+#radio_btn2:checked ~ .text_wrapper .active label[for=radio_btn2] .round,
+#radio_btn3:checked ~ .text_wrapper .active label[for=radio_btn3] .round,
+#radio_btn4:checked ~ .text_wrapper .active label[for=radio_btn4] .round
+{
+    background-color: rgb(35, 35, 35);
+}
+
+.pictures .image {
+    transition: 1s margin-left linear;
+}
+.text_wrapper .texts {
+    transition: 1s margin-left linear;
+}
+
+label:hover .round {
+    border-color: white;
+    background-color: white;
+}
+
+/* 320 */
+@media screen and (max-width: 320px) {
+    /* .im{object-fit: contain;}  */
+    .box{height: 40vh;}
+    .memewindow{height: 39vh;}
+    .overflow{height: 25vh; margin-top: .5vh;}
+    .image{height: 25vh;}
+    .im{height: 25vh;}
+    .text_wrapper{height: 5vh;margin-top: 5vh;flex-wrap:wrap-reverse;}
+    .overflow_text{height: 5vh;}
+    .active label {        
+        width: 3vh;
+        height: 3vh;                 
+    }
+    .active{margin-left: 15vh;margin-top: -4vh;}
+    .round{
+        width: 1vh;
+        height: 1vh;
+        margin: 0.7vh auto;
+        
+    }
+
+}
